@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "8c415967-83cd-4f3f-94cc-33028363dd69",
+		"name": "Survivor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Survivor",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"name\" : \"Fulano 1\",\r\n    \"age\" : \"30\",\r\n    \"gender\": \"Masculino\",\r\n    \"lastLocation\":{\r\n        \"latitude\": \"5\",\r\n        \"longitude\":\"5\"\r\n    },\r\n     \"itens\":[\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":2},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":2}\r\n     ]    \r\n\r\n \r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/survivor-management/survivors",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/survivor-management/survivors/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"name\" : \"Fulano 2\",\r\n    \"age\" : \"30\",\r\n    \"gender\": \"Masculino\",\r\n    \"lastLocation\":{\r\n        \"latitude\": \"25\",\r\n        \"longitude\":\"45\"\r\n    },\r\n     \"itens\":[\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":20},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":2}\r\n     ]    \r\n\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Survivor2",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"name\" : \"Fulano 2\",\r\n    \"age\" : \"30\",\r\n    \"gender\": \"Feminino\",\r\n    \"lastLocation\":{\r\n        \"latitude\": \"15\",\r\n        \"longitude\":\"65\"\r\n    },\r\n     \"itens\":[\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":2},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":2},\r\n            {\"name\": \"medication\",\"point\":2,\"quantity\":3},\r\n            {\"name\": \"ammunition\",\"point\":1, \"quantity\":2}\r\n     ]    \r\n\r\n \r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Survivor3",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"name\" : \"Fulano 3\",\r\n    \"age\" : \"30\",\r\n    \"gender\": \"Feminino\",\r\n    \"lastLocation\":{\r\n        \"latitude\": \"15\",\r\n        \"longitude\":\"5\"\r\n    },\r\n     \"itens\":[\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":2},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":2},\r\n            {\"name\": \"medication\",\"point\":2,\"quantity\":1},\r\n            {\"name\": \"ammunition\",\"point\":1, \"quantity\":2}\r\n     ]    \r\n\r\n \r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Survivor4",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"name\" : \"Fulano 4\",\r\n    \"age\" : \"30\",\r\n    \"gender\": \"Masculino\",\r\n    \"lastLocation\":{\r\n        \"latitude\": \"15\",\r\n        \"longitude\":\"85\"\r\n    },\r\n     \"itens\":[\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":3},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":2},\r\n            {\"name\": \"medication\",\"point\":2,\"quantity\":1},\r\n            {\"name\": \"ammunition\",\"point\":1, \"quantity\":2}\r\n     ]    \r\n\r\n \r\n}\r\n\r\n\r\n\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContaminationFlags1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportedBy\":{\"id\":2},\r\n   \r\n\t \"reported\":{\"id\":1}\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/contaminationFlags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"contaminationFlags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContaminationFlags2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportedBy\":{\"id\":3},\r\n   \r\n\t \"reported\":{\"id\":1}\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/contaminationFlags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"contaminationFlags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ContaminationFlags3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportedBy\":{\"id\":4},\r\n   \r\n\t\"reported\":{\"id\":1}\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/survivor-management/contaminationFlags",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"survivor-management",
+						"contaminationFlags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contaminationFlagsList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/survivor-management/contaminationFlags/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survivor-management",
+						"contaminationFlags",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make-exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"userId\": 1,\r\n \"recipientName\" : \"Fulano 3\",\r\n \"itemsWanted\":[\r\n            {\"name\": \"medication\",\"point\":2,\"quantity\":3},\r\n            {\"name\": \"ammunition\",\"point\":1, \"quantity\":1}\r\n     ]    ,\r\n\"itemsForPayment\": [\r\n            {\"name\": \"water\",\"point\":4,\"quantity\":1},\r\n            {\"name\": \"food\",\"point\":3, \"quantity\":1}\r\n     ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/exchange/make-exchange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"exchange",
+						"make-exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "percentage-infected-survivors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/report/percentage-infected-survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"report",
+						"percentage-infected-survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "percentage-non-infected-survivors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/report/percentage-non-infected-survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"report",
+						"percentage-non-infected-survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "average-resource-by-survivor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/report/average-resource-by-survivor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"report",
+						"average-resource-by-survivor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lost-point-infected-survivors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/report/lost-point-infected-survivors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"report",
+						"lost-point-infected-survivors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/zssnapi/report/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"zssnapi",
+						"report",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
