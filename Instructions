@@ -1,0 +1,116 @@
+# ZSSN (Zombie Survival Social Network)
+ZSSN API
+
+Objetivo: Cadastrar os últimos sobreviventes do apocalipse Zumbi.
+A api permite o cadastro, atualização e gerenciamento de inventario dos sobreviventes.
+Exibe relatórios de porcentagem de sobreviventes não infectados, infectados e a média de recursos por sobrevivente.
+
+# Prerequisites
+* Java 8+
+* JBoss/Wildfly
+* Postman
+
+# Enviroment
+* Deploy zssnapi.war no servidor JBoss
+Obs: zssnapi.war split in zssnapi.part1.rar and zssnapi.part2.rar
+
+# Running
+
+Start Wilfly Server and them execute a Postman Collection or go to instructions below 
+
+All instructions/methods are in **Survivor.postman_collection.json** for Postman
+
+* **POST Create a Survivor**
+
+http://localhost:8080/zssnapi/survivor-management/survivors/
+
+Example:
+{ 
+    "name" : "Fulano 1",
+    "age" : "30",
+    "gender": "Masculino",
+    "lastLocation":{
+        "latitude": "5",
+        "longitude":"5"
+    },
+     "itens":[
+            {"name": "water","point":4,"quantity":2},
+            {"name": "food","point":3, "quantity":2}
+     ]    
+}
+
+
+* **GET List Survivors**
+
+ http://localhost:8080/zssnapi/survivor-management/survivors
+ 
+* **POST Flag Infected**
+
+http://localhost:8080/zssnapi/survivor-management/contaminationFlags
+
+Example:
+{
+ "reportedBy":{"id":4},
+	"reported":{"id":1}
+}
+
+* **PUT Update Survivor**
+
+http://localhost:8080/zssnapi/survivor-management/survivors/2
+
+Example:
+{ 
+    "name" : "Fulano 2",
+    "age" : "30",
+    "gender": "Masculino",
+    "lastLocation":{
+        "latitude": "25",
+        "longitude":"45"
+    },
+     "itens":[
+            {"name": "water","point":4,"quantity":20},
+            {"name": "food","point":3, "quantity":2}
+     ]    
+ 
+}
+
+* **GET List Reports**
+
+List All Reports
+
+http://localhost:8080/zssnapi/report/
+
+List Percentage Infected Survivors
+
+http://localhost:8080/zssnapi/report/percentage-infected-survivors
+
+List Percentage non Infected Survivors
+
+http://localhost:8080/zssnapi/report/percentage-non-infected-survivors
+
+List Average Resource by survivor
+
+http://localhost:8080/zssnapi/report/average-resource-by-survivor
+
+List Lost Point Infected Survivors
+
+http://localhost:8080/zssnapi/report/lost-point-infected-survivors
+
+* **POST Make Exchange**
+
+http://localhost:8080/zssnapi/exchange/make-exchange
+
+Example:
+
+{
+ "userId": 1,
+ "recipientName" : "Fulano 3",
+ "itemsWanted":[
+            {"name": "medication","point":2,"quantity":3},
+            {"name": "ammunition","point":1, "quantity":1}
+     ]    ,
+"itemsForPayment": [
+            {"name": "water","point":4,"quantity":1},
+            {"name": "food","point":3, "quantity":1}
+     ] 
+}
